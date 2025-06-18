@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
 
 html, body {
     box-sizing: border-box;
@@ -12,6 +10,7 @@ html, body {
 body {
     min-height: 100vh;
     background-color: #f2f2f2 ;
+    position: relative;
 }
 
 
@@ -30,7 +29,7 @@ body {
   padding: 1rem 3rem 2rem 3rem;
 }
 
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 930px) {
   .header {
     justify-content: space-between;
   }
@@ -40,7 +39,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 930px) {
   .header___middle-container {
     display: flex;
   }
@@ -78,12 +77,26 @@ body {
 }
 
 .header__button:first-of-type {
+  transition: color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   color: #00b289;
+}
+
+.header__button:first-of-type:hover {
+  cursor: pointer;
+  background-color: #00b289;
+  color: #fff;
 }
 
 .header__button:last-of-type {
   color: #fff;
   background-color: #00b289;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header__button:last-of-type:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 
@@ -92,86 +105,243 @@ body {
 
   /* Top Headings  */
 
-.pricing__top-headings {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
+  .pricing__top-headings {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 5rem auto 2rem auto;
+  }
 
-.top__headings-left-text {
-  font-size: 1.875rem;
-  font-weight: 600;
-}
+  @media screen and (max-width: 541px) {
+    .pricing__top-headings {
+      margin: 1rem auto 2rem auto;
+    }
+  }
+  
 
-.top__headings-right {
-  position: relative;
-}
+  .top__headings-left-text {
+    position: relative;
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #4c4d5f;
+    top: 1.1rem;
+  }
 
-.top__headings-arrow {
-  position: absolute;
-  top: 20px;
-  right: -30px;
-}
+  @media screen and (max-width: 541px) {
+    .top__headings-left-text {
+      top: 0;
+    }
+  }
+  
 
-.right__bottom-container {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+  .top__headings-right {
+    position: relative;
+  }
 
-.right__bottom-container > span {
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #4c4d5f;
-}
+  .top__headings-arrow {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+  }
 
-.right__bottom-container > span:last-of-type {
-  opacity: 0.5;
-}
+  .right__bottom-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
 
-.right__top-text {
-  text-align: end;
-  margin: 1.1rem 0;
-  font-size: 0.9rem;
-  color: #00b289;
-}
+  .right__bottom-container > span {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #4c4d5f;
+  }
 
-.right__toggle-switch-container {
-  position: relative;
-  display: inline-flex;
-  width: 65px;
-  height: 32.5px;
-  align-items: center;
-  background-color: #00b289;
-  border-radius: 50px;
-}
+  .right__bottom-container > span:last-of-type {
+    opacity: 0.5;
+  }
 
-.right__bottom-container input {
-  display: none;
-}
+  .right__top-text {
+    text-align: end;
+    margin: 1.1rem 0;
+    font-size: 0.9rem;
+    color: #00b289;
+  }
 
-.right__toggle-switch {
-  position: absolute;
-  top: 2.2px;
-  display: inline-block;
-  width: 42.5%;
-  height: 85%;
-  background-color: #fff;
-  border-radius: 50%;
-  margin-left: 3px;
-  transition: transform 0.2s ease-in-out;
-}
+  .right__toggle-switch-container {
+    position: relative;
+    display: inline-flex;
+    width: 65px;
+    height: 32.5px;
+    align-items: center;
+    background-color: #00b289;
+    border-radius: 50px;
+  }
 
-.toggle__checkbox:checked + span {
-  opacity: 0.5;
-}
+  .right__bottom-container input {
+    display: none;
+  }
 
-.toggle__checkbox:checked + span + span + span {
-  opacity: 1;
-}
+  .right__toggle-switch {
+    position: absolute;
+    top: 2.2px;
+    display: inline-block;
+    width: 42.5%;
+    height: 85%;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 3px;
+    transition: transform 0.2s ease-in-out;
+  }
 
-.toggle__checkbox:checked + span + span .right__toggle-switch {
-  transform: translateX(31px);
-}
+  .toggle__checkbox:checked + span {
+    opacity: 0.5;
+  }
+
+  .toggle__checkbox:checked + span + span + span {
+    opacity: 1;
+  }
+
+  .toggle__checkbox:checked + span + span .right__toggle-switch {
+    transform: translateX(31px);
+  }
+
+
+  /*  Pricing Plans */
+
+  .pricing__plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem;
+  }
+  
+  .pricing__plan {
+    position: relative;
+    border: 1px solid #ccc;
+    height: 606px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 400px;
+    background-color: #fff;
+    color: #4c4d5f;
+    border-radius: 4px;
+  }
+
+
+  /* Ribbon generated with CSS Generators: https://css-generators.com/ribbon-shapes/ */
+
+  .pricing__plan-ribbon {
+    --f: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 800;
+    font-size: 1.25rem;
+    background-color: #00b289;
+    color: #fff;
+    padding: 1.25rem 4rem;
+    line-height: 1.8;
+    padding-inline: 1h;
+    font-family: "Red Hat Display";
+    padding-top: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+    clip-path: polygon(
+      100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+    transform: translate(calc((1 - cos(45deg))*100%), -100%) rotate(45deg);
+    transform-origin: 0% 100%;
+    background-color: #00b289; /* the main color  */
+  }
+
+
+
+  
+  .pricing__plan-heading {
+    font-size: 1.6rem;
+    margin: 2rem;
+    
+  }
+  
+  .pricing__plan-monthly {
+    margin: 2rem 2rem 0rem 2rem;
+    font-size: 3.5rem;
+    font-family: "Red Hat Display";
+    letter-spacing: 2px;
+    font-weight: 800;
+  }
+
+  .pricing__plan-monthly sup {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 10px;
+  }
+
+  .pricing__plan-monthly span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    
+  }
+
+  .line__separator {
+    width: 82.5%;
+    height: 2px;
+    background-color: #00b289;
+    margin: 1.5rem auto;
+  }
+
+  .plan__perks-list {
+    position: relative;
+    list-style: none;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 2.1rem;
+    margin-top: 1.75rem;
+  }
+
+  .plan__perk {
+    display: block;
+  }
+
+  .plan__perk i {
+    color: #00b289;
+    transform: scale(0.9);
+  }
+
+  .plan__perk-text {
+    margin: 0 0.25rem 0 0.5rem;
+  }
+
+  .plan__perk-tag {
+    display: inline;
+    background-color: #f8db62;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    font-weight: 900;
+  }
+  
+
+  .pricing__plan-button {
+    display: block;
+    margin: 2.25rem auto;
+    padding: 1.3rem 8rem;
+    border-radius: 4px;
+    background-color: #00b289;
+    font-weight: 700;
+    color: #fff;
+    border: transparent;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .pricing__plan-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
 
