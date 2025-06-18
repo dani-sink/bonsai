@@ -11,6 +11,7 @@ html, body {
 
 body {
     min-height: 100vh;
+    background-color: #f2f2f2 ;
 }
 
 
@@ -18,4 +19,69 @@ body {
 
 .header__logo path {
   fill: #00b289;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 3rem 2rem 3rem;
+}
+
+@media screen and (min-width: 910px) {
+  .header {
+    justify-content: space-between;
+  }
+}
+
+.header___middle-container {
+  display: none;
+}
+
+@media screen and (min-width: 910px) {
+  .header___middle-container {
+    display: flex;
+  }
+}
+
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header__nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__nav i,
+.header__nav a {
+  color: #4c4d5f;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__button {
+  padding: 10px 28px;
+  border: 1px solid #00b289;
+  font-weight: 900;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.header__button:first-of-type {
+  color: #00b289;
+}
+
+.header__button:last-of-type {
+  color: #fff;
+  background-color: #00b289;
 }
