@@ -43,7 +43,7 @@ open index.html
 ## 📸 Preview
 
 ![Bonsai Screenshot](./images/screenshot-pricing.png)  
-_A snapshot of the p\Pricing section_
+_A snapshot of the Pricing section_
 
 ## 📄 Purpose
 
