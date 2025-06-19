@@ -497,7 +497,7 @@ body {
 
 .call-to-action {
   width: 100%;
-  padding: 4rem 0;
+  padding: 6rem 0 3rem 0;
 }
 
 .CTA__container {
@@ -530,6 +530,7 @@ body {
 
 .CTA__container-text {
   padding-left: 4rem;
+  color: #4c4d5f;
 }
 
 .CTA__container-text h2{
@@ -563,4 +564,67 @@ body {
   color: #fff;
   font-weight: 900;
   border-radius: 4px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.CTA__button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+
+/* FAQ */
+
+
+.FAQ {
+  width: 100%;
+  padding: 1rem 0 5rem 0;
+  font-family: var(--red-hat);
+  color: #4c4d5f;
+}
+
+.FAQ > h3 {
+  text-align: center;
+  color: #00b289;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 2rem;
+}
+
+.FAQ__questions {
+  max-width: 825px;
+  margin: 3rem auto;
+  font-family: var(--inter);
+}
+
+.FAQ__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.FAQ__question p {
+  font-size: 1.25rem;
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .FAQ__question p {
+    padding: 0 2.5rem;
+  }
+}
+
+.FAQ__question i {
+  color: #4c4d5f;
+  opacity: 0.25;
+  padding: 0 5rem;
+  transform: scale(1.4);
+}
+
+@media screen and (max-width: 500px) {
+  .FAQ__question i {
+    padding: 0 2.5rem;
+  }
 }
