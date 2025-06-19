@@ -628,3 +628,74 @@ body {
     padding: 0 2.5rem;
   }
 }
+
+
+
+/* Footer */
+
+
+.footer {
+  width: 100%;
+  padding: 1rem 0 8rem 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #4c4d5f;
+  font-family: var(--inter);
+  max-width: 1025px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  gap: 4rem;
+}
+
+.container__product-heading,
+.container__free-resources-heading,
+.list__templates-heading,
+.container__bonsai-heading {
+  font-weight: 600;
+}
+
+.footer__container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 2.25rem;
+}
+
+.footer__container a {
+  text-decoration: none;
+  color: #4c4d5f;
+}
+
+.footer__container a:hover,
+.footer__container a:hover + i
+ {
+  color: #00b289;
+  cursor: pointer;
+}
+
+.footer__container-product,
+.footer__container-bonsai
+ {
+  padding-right: 4rem;
+}
+
+.container__list> li:first-child {
+  padding-top: 2.5rem;
+}
+
+.list__space {
+  padding-top: 2rem;
+}
+
+.green__heading a {
+  color: #00b289;
+}
+
+.list__templates-heading {
+  margin: 0.5rem 0 1rem 0;
+}
